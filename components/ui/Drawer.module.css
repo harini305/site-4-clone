@@ -1,0 +1,85 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  visibility: hidden;
+  transition: visibility 0s linear 0.45s;
+}
+.open {
+  pointer-events: auto;
+  visibility: visible;
+  transition: visibility 0s;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 11, 18, 0.55);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+.open .backdrop {
+  opacity: 1;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: min(420px, 100%);
+  background: var(--c-white);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transition: transform 0.45s var(--ease), opacity 0.45s var(--ease);
+}
+
+.right {
+  right: 0;
+  transform: translateX(100%);
+}
+.left {
+  left: 0;
+  transform: translateX(-100%);
+}
+.full {
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.98);
+}
+.open .right,
+.open .left {
+  transform: translateX(0);
+}
+.open .full {
+  opacity: 1;
+  transform: none;
+}
+
+.close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  color: var(--c-black);
+  transition: transform 0.3s var(--ease);
+}
+.close:hover {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .backdrop {
+    transition: none;
+  }
+}

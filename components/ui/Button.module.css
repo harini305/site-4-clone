@@ -1,0 +1,112 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  isolation: isolate;
+  font-family: var(--f-body);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  border: 1px solid transparent;
+  transition: color 0.35s var(--ease), border-color 0.35s var(--ease), background-color 0.35s var(--ease);
+}
+
+/* sliding fill on hover */
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--hover-bg, #222);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s var(--ease);
+}
+.btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn:disabled::before {
+  display: none;
+}
+
+.sm {
+  min-height: 40px;
+  padding: 8px 22px;
+  font-size: 12px;
+}
+.md {
+  min-height: 54px;
+  padding: 12px 44px;
+  font-size: 14px;
+}
+.lg {
+  min-height: 60px;
+  padding: 14px 40px;
+  font-size: 15px;
+}
+.block {
+  width: 100%;
+}
+
+.black {
+  background: var(--c-black);
+  color: var(--c-white);
+  --hover-bg: var(--c-gold);
+}
+.gold {
+  background: var(--c-gold);
+  color: var(--c-white);
+  --hover-bg: var(--c-black);
+}
+.green {
+  background: var(--c-green);
+  color: var(--c-white);
+  --hover-bg: var(--c-black);
+}
+.teal {
+  background: var(--c-teal);
+  color: var(--c-white);
+  --hover-bg: var(--c-black);
+}
+.light {
+  background: #a5a6a9;
+  color: var(--c-white);
+  --hover-bg: var(--c-black);
+}
+.outline {
+  background: transparent;
+  color: var(--c-black);
+  border-color: var(--c-line);
+  --hover-bg: var(--c-black);
+}
+.outline:hover {
+  color: var(--c-white);
+  border-color: var(--c-black);
+}
+
+/* underlined text link button ("SHOP NOW" on the promo tiles) */
+.text {
+  min-height: 0;
+  padding: 2px 0;
+  background: none;
+  color: var(--accent, var(--c-gold));
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  letter-spacing: 0.2em;
+}
+.text::before {
+  display: none;
+}
+.text:hover {
+  color: var(--c-black);
+}

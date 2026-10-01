@@ -1,0 +1,33 @@
+.price {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  font-style: italic;
+  color: var(--c-black);
+}
+
+.current {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.regular {
+  color: var(--c-muted);
+  font-size: 0.9em;
+}
+
+.sm {
+  font-size: 14px;
+}
+.md {
+  font-size: 16px;
+}
+.lg {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.lg .current {
+  font-weight: 800;
+}

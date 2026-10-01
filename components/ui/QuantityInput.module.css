@@ -1,0 +1,50 @@
+.qty {
+  display: inline-flex;
+  align-items: center;
+  background: var(--c-soft);
+  height: 60px;
+}
+
+.qty button {
+  width: 44px;
+  height: 100%;
+  font-size: 18px;
+  color: var(--c-teal);
+  transition: color 0.2s var(--ease);
+}
+.qty button:hover:not(:disabled) {
+  color: var(--c-black);
+}
+.qty button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.qty input {
+  width: 40px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--c-black);
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.qty input::-webkit-outer-spin-button,
+.qty input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sm {
+  height: 40px;
+}
+.sm button {
+  width: 32px;
+  font-size: 15px;
+}
+.sm input {
+  width: 30px;
+  font-size: 14px;
+}

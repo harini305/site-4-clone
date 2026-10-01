@@ -1,0 +1,23 @@
+.heading {
+  margin-bottom: 40px;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+
+.eyebrow {
+  font-family: var(--f-heading);
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  margin: 0 0 22px;
+}
+
+.title {
+  font-size: clamp(32px, 3.4vw, 48px);
+  margin: 0;
+}

@@ -1,0 +1,101 @@
+.section {
+  position: relative;
+  margin-top: 40px;
+}
+
+.media {
+  position: relative;
+  height: 596px;
+  overflow: hidden;
+}
+.media img {
+  transform: scale(1.08);
+}
+
+.card {
+  position: absolute;
+  top: 43px;
+  right: calc(var(--gutter) + 40px);
+  width: min(673px, 50%);
+  padding: 76px 70px 70px 74px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(2px);
+}
+
+.title {
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1.25;
+  margin: 14px 0 36px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 13px 13px 17px;
+  border: 1px solid #7d7d7d;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  height: 54px;
+}
+.input:focus {
+  outline: none;
+}
+.input::placeholder {
+  color: #666;
+}
+
+.submit {
+  height: 54px;
+  padding: 0 34px;
+  background: var(--c-teal);
+  color: var(--c-white);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background 0.3s var(--ease);
+}
+.submit:hover {
+  background: var(--c-black);
+}
+
+.success {
+  color: var(--c-teal);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 60%;
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .media {
+    height: 320px;
+  }
+  .card {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    margin: -80px 16px 0;
+    padding: 36px 24px;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  .form {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+  .input {
+    padding: 0 6px;
+  }
+}

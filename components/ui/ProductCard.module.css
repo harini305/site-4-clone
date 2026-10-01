@@ -1,0 +1,176 @@
+.card {
+  min-width: 0;
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 313 / 368;
+  background: var(--c-soft);
+  overflow: hidden;
+}
+
+.imageLink {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.imageLink img {
+  padding: 22%;
+  transition: transform 0.8s var(--ease), opacity 0.5s var(--ease);
+}
+
+.alt {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s var(--ease);
+}
+.card:hover .alt {
+  opacity: 1;
+}
+.card:hover .imageLink > img {
+  opacity: 0;
+}
+.card:hover .imageLink img {
+  transform: scale(1.05);
+}
+.media:not(:has(.alt)) .imageLink > img {
+  opacity: 1 !important;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 19px;
+  padding: 20px 10px;
+  background: #2a2a2a;
+  color: var(--c-white);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 0;
+}
+
+.tools {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  transform: translateY(100%);
+  transition: transform 0.4s var(--ease);
+}
+.card:hover .tools,
+.tools:focus-within {
+  transform: none;
+}
+
+.tool {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  background: var(--c-black);
+  color: var(--c-white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background 0.3s var(--ease);
+}
+.tool svg {
+  font-size: 18px;
+}
+.tool:hover {
+  background: var(--c-gold);
+}
+
+.wish {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  background: var(--c-white);
+  color: var(--c-black);
+  font-size: 20px;
+  border-left: 1px solid var(--c-line-soft);
+}
+.wish:hover,
+.wished {
+  color: #c0392b;
+}
+
+.body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px 19px 10px;
+}
+
+.meta {
+  min-width: 0;
+}
+
+.name {
+  font-family: var(--f-body);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+.name a:hover {
+  color: var(--c-gold);
+}
+
+.cats {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  color: #9a9a9a;
+}
+.cats a:hover {
+  color: var(--c-black);
+}
+
+.price {
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  padding-top: 6px;
+  white-space: nowrap;
+}
+
+/* Touch devices: keep the add-to-cart bar visible */
+@media (hover: none) {
+  .tools {
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .body {
+    flex-direction: column;
+    padding: 16px 4px 6px;
+    gap: 6px;
+  }
+  .name {
+    font-size: 15px;
+  }
+  .cats {
+    font-size: 13px;
+  }
+  .price {
+    align-items: flex-start;
+    flex-direction: row;
+    padding-top: 0;
+  }
+  .tool span {
+    display: none;
+  }
+  .tool,
+  .wish {
+    height: 44px;
+  }
+}
