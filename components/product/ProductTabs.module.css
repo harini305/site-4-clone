@@ -1,0 +1,173 @@
+.wrap {
+  margin-top: 100px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background: var(--c-black);
+  padding: 0 20px;
+}
+
+.tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 56px;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8f8f8f;
+  transition: color 0.25s var(--ease);
+}
+.tab:hover,
+.active {
+  color: var(--c-white);
+}
+.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  height: 1px;
+  background: currentColor;
+}
+.tab:focus-visible {
+  outline-color: var(--c-white);
+}
+
+.count {
+  min-width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #3a3a3a;
+  color: var(--c-white);
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.panelWrap {
+  background: var(--c-soft);
+  padding: 60px 123px 70px;
+}
+
+.panel {
+  max-width: 1060px;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.heading {
+  font-size: 48px;
+  letter-spacing: -0.02em;
+  margin-bottom: 30px;
+}
+
+.list {
+  list-style: none;
+  padding-left: 17px;
+  margin: 0 0 30px;
+}
+.list li {
+  position: relative;
+}
+.list li::before {
+  content: '–';
+  position: absolute;
+  left: -17px;
+}
+
+.hr {
+  border: 0;
+  border-top: 1px solid #bdbdbd;
+  margin: 30px 0;
+}
+
+.dims {
+  padding-left: 17px;
+}
+
+.reviews {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  display: grid;
+  gap: 20px;
+}
+.review {
+  background: var(--c-white);
+  padding: 20px 24px;
+}
+.review p {
+  margin: 4px 0 0;
+}
+.reviewMeta {
+  font-size: 14px;
+  color: var(--c-muted);
+}
+
+.form {
+  margin-top: 30px;
+}
+.formTitle {
+  font-size: 26px;
+}
+.note {
+  font-size: 14px;
+  color: var(--c-muted);
+}
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--c-ink);
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.submit {
+  height: 54px;
+  padding: 0 44px;
+  background: var(--c-black);
+  color: var(--c-white);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background 0.3s var(--ease);
+}
+.submit:hover {
+  background: var(--c-gold);
+}
+
+@media (max-width: 1024px) {
+  .panelWrap {
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    margin-top: 60px;
+  }
+  .tabs {
+    gap: 24px;
+  }
+  .panelWrap {
+    padding: 36px 20px;
+  }
+  .heading {
+    font-size: 32px;
+  }
+  .twoCol {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
