@@ -12,6 +12,7 @@ import SearchOverlay from '@/components/layout/SearchOverlay';
 import MobileMenu from '@/components/layout/MobileMenu';
 import Toasts from '@/components/ui/Toasts';
 import BackToTop from '@/components/ui/BackToTop';
+import ScrollManager from '@/components/layout/ScrollManager';
 import { site } from '@/data/site';
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat', display: 'swap' });
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
           <MobileMenu />
           <Toasts />
           <BackToTop />
+          <ScrollManager />
         </StoreProvider>
       </body>
     </html>
