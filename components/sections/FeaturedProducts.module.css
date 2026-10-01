@@ -1,0 +1,17 @@
+.section {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.inner {
+  padding-inline: 15px;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-top: 60px;
+  }
+  .inner {
+    padding-inline: 0;
+  }
+}
