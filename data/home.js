@@ -75,7 +75,7 @@ export const promoTiles = [
 ];
 
 export const features = [
-  { icon: 'clock', title: 'Short Time Delivery', text: 'Dispatched within 48 hours' },
+  { icon: 'clock', title: 'Short Time Delivery', text: 'Fast 48h dispatch' },
   { icon: 'shield', title: 'Secure Payment', text: '100% secure payment' },
   { icon: 'truck', title: 'Free Delivery', text: 'All orders over $30' },
   { icon: 'support', title: 'Customer Support', text: 'Support 24/7 every day' },

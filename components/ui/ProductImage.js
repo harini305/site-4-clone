@@ -9,7 +9,7 @@ export default function ProductImage({ src, alt, sizes = '(max-width: 768px) 50v
       fill
       sizes={sizes}
       priority={priority}
-      className={`img-fallback ${className}`}
+      className={className || undefined}
       style={{ objectFit: 'contain' }}
     />
   );

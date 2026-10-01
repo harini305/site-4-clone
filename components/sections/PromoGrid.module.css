@@ -121,7 +121,8 @@
 .bottom {
   width: 100%;
   margin-top: auto;
-  padding: 0 24px 50px;
+  padding: 80px 24px 50px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent);
 }
 .bottom .title {
   font-size: 30px;
@@ -194,6 +195,11 @@
   }
   .side {
     width: 60%;
+    padding: 20px 16px;
+  }
+  .side a {
+    padding-inline: 24px;
+    white-space: nowrap;
   }
   .side .title {
     font-size: 34px;

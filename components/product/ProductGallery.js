@@ -36,7 +36,6 @@ export default function ProductGallery({ images, name }) {
               fill
               priority={i === 0}
               sizes="(max-width: 900px) 100vw, 580px"
-              className="img-fallback"
               style={{ objectFit: 'contain', padding: '10%' }}
             />
           </div>
