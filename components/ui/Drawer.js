@@ -14,6 +14,11 @@ const FOCUSABLE =
 export default function Drawer({ open, onClose, side = 'right', title, children, labelledBy, className = '' }) {
   const panelRef = useRef(null);
   const lastFocus = useRef(null);
+  // Keep the latest onClose without re-running the open/close effect on every render.
+  const onCloseRef = useRef(onClose);
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -23,7 +28,7 @@ export default function Drawer({ open, onClose, side = 'right', title, children,
     const t = setTimeout(() => first?.focus(), 60);
 
     const onKey = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') onCloseRef.current();
       if (e.key !== 'Tab' || !panel) return;
       const nodes = [...panel.querySelectorAll(FOCUSABLE)].filter((n) => n.offsetParent !== null);
       if (!nodes.length) return;
@@ -47,7 +52,7 @@ export default function Drawer({ open, onClose, side = 'right', title, children,
       document.removeEventListener('keydown', onKey);
       lastFocus.current?.focus?.();
     };
-  }, [open, onClose]);
+  }, [open]);
 
   return (
     <div className={`${styles.root} ${open ? styles.open : ''}`} aria-hidden={!open} inert={!open}>
