@@ -1,0 +1,29 @@
+.wrap {
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 80px;
+}
+
+.code {
+  font-family: var(--f-script);
+  font-size: clamp(110px, 18vw, 220px);
+  line-height: 1;
+  color: var(--c-black);
+  margin: 0;
+}
+
+.title {
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.text {
+  color: var(--c-muted);
+  margin-bottom: 30px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}

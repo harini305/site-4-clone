@@ -1,0 +1,141 @@
+.intro {
+  display: grid;
+  grid-template-columns: 765fr 552fr;
+  gap: 53px;
+  align-items: center;
+  padding-top: 62px;
+  padding-bottom: 150px;
+}
+
+.introImage {
+  position: relative;
+  aspect-ratio: 765 / 558;
+}
+
+.introText {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #222;
+}
+
+.eyebrow {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-black);
+  margin-bottom: 36px;
+}
+
+.title {
+  font-size: clamp(36px, 4vw, 60px);
+  line-height: 1.2;
+  color: var(--c-ink);
+  margin-bottom: 50px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 50px 0 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  text-align: center;
+}
+.stat + .stat {
+  border-left: 1px solid #d0d0d0;
+}
+
+.statValue {
+  margin: 0;
+  font-size: 50px;
+  line-height: 1;
+  color: var(--c-black);
+}
+
+.statLabel {
+  font-size: 16px;
+  color: #222;
+}
+
+.band {
+  background: var(--c-soft);
+  padding: 120px 0 130px;
+}
+
+.bandGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.bandTitle {
+  font-family: var(--f-heading);
+  font-size: clamp(32px, 3.4vw, 48px);
+  line-height: 1.2;
+  color: var(--c-ink);
+  margin: 0;
+}
+
+.pillar {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #6b7280;
+}
+
+.pillarTitle {
+  font-family: var(--f-heading);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.wide {
+  position: relative;
+  aspect-ratio: 1299 / 620;
+  max-width: 1299px;
+}
+
+@media (max-width: 1024px) {
+  .intro {
+    gap: 36px;
+    padding-bottom: 90px;
+  }
+  .bandGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bandTitle {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro {
+    grid-template-columns: 1fr;
+    padding-top: 36px;
+    padding-bottom: 70px;
+  }
+  .band {
+    padding: 70px 0;
+  }
+  .bandGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .statValue {
+    font-size: 36px;
+  }
+  .statLabel {
+    font-size: 13px;
+  }
+}
