@@ -23,6 +23,7 @@
   position: absolute;
   inset: 0;
   opacity: 0;
+  mix-blend-mode: multiply;
   transition: opacity 0.5s var(--ease);
 }
 .card:hover .alt {

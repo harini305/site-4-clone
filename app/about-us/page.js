@@ -32,7 +32,7 @@ export default function AboutPage() {
         <Reveal from="left" className={styles.introImage}>
           <Image
             src="/images/about/about-us.jpg"
-            alt="Living room with a yellow armchair, brass floor lamp and framed abstract art"
+            alt="Yellow lounge chairs and a round side table by floor-to-ceiling windows"
             fill
             priority
             sizes="(max-width: 900px) 100vw, 765px"
@@ -85,7 +85,7 @@ export default function AboutPage() {
           <Reveal className={styles.wide}>
             <Image
               src="/images/about/about-2.jpg"
-              alt="Beige sofa with grey cushions between large potted plants and wooden side tables"
+              alt="Cream sofa and glass coffee table beside a potted plant"
               fill
               sizes="(max-width: 1440px) 95vw, 1300px"
               className="img-fallback"

@@ -13,6 +13,7 @@
   position: absolute;
   inset: 0;
   opacity: 0;
+  mix-blend-mode: multiply;
   transform: scale(1.03);
   transition: opacity 0.6s var(--ease), transform 0.8s var(--ease);
 }
@@ -77,6 +78,9 @@
 }
 .thumb:hover {
   border-color: var(--c-line);
+}
+.thumb img {
+  mix-blend-mode: multiply;
 }
 .thumbActive {
   border-color: var(--c-black);

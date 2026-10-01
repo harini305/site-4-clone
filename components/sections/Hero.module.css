@@ -26,6 +26,18 @@
   height: 110% !important;
   top: -5% !important;
 }
+/* keeps the white headline legible over bright photography */
+.media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 12, 16, 0.55) 0%, rgba(10, 12, 16, 0.3) 45%, rgba(10, 12, 16, 0) 75%);
+}
+@media (max-width: 900px) {
+  .media::after {
+    background: rgba(10, 12, 16, 0.38);
+  }
+}
 
 .content {
   position: relative;

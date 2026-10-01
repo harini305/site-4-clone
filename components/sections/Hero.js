@@ -48,7 +48,7 @@ export default function Hero() {
           <Image
             data-hero-img
             src="/images/banners/hero-armchair.jpg"
-            alt="Yellow armchair beside a side table and cabinet against a grey concrete wall"
+            alt="Two yellow padded chairs and a round side table by a bright window"
             fill
             priority
             sizes="(max-width: 900px) 100vw, 1020px"

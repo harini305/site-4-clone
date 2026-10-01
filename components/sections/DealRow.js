@@ -12,7 +12,7 @@ export default function DealRow() {
       <Reveal from="left" className={styles.bedroom}>
         <Image
           src="/images/banners/bedroom-accessories.jpg"
-          alt="Bedroom styled with soft textiles and accessories"
+          alt="Minimal white bedroom with a copper bedside lamp"
           fill
           sizes="(max-width: 900px) 100vw, 440px"
           className={`img-fallback ${styles.img}`}
@@ -31,7 +31,7 @@ export default function DealRow() {
       <Reveal from="right" className={styles.deal}>
         <Image
           src="/images/banners/deal-of-the-day.jpg"
-          alt="Bright dining room with wooden chairs and a stone table"
+          alt="Glass dining table with dried flowers in a bright room"
           fill
           sizes="(max-width: 900px) 100vw, 900px"
           className={`img-fallback ${styles.img}`}
