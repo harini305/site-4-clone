@@ -1,0 +1,82 @@
+// Homepage promotional tiles (masonry grid below the hero).
+// `area` maps to a grid-template-area in PromoGrid.module.css.
+
+export const promoTiles = [
+  {
+    area: 'acc',
+    layout: 'top',
+    image: '/images/banners/accessories.jpg',
+    alt: 'Wooden sideboard styled with black vases and dried branches',
+    script: 'Decor',
+    title: 'Accessories',
+    cta: { label: 'Shop now', href: '/product-category/decorative', variant: 'gold' },
+    from: 'up',
+  },
+  {
+    area: 'art',
+    layout: 'box',
+    image: '/images/banners/art-wall.jpg',
+    alt: 'Framed abstract print above a yellow armchair and brass floor lamp',
+    eyebrow: 'Art',
+    title: 'Wall',
+    cta: { label: 'Shop now', href: '/product-category/inside', variant: 'text', accent: '#a27b3b' },
+    from: 'up',
+  },
+  {
+    area: 'mod',
+    layout: 'side',
+    image: '/images/banners/modern-furniture.jpg',
+    alt: 'Pink tufted sofa in front of matching pink curtains',
+    script: 'New',
+    title: 'Modern furniture',
+    cta: { label: 'Shop now', href: '/product-category/furniture', variant: 'black' },
+    from: 'right',
+  },
+  {
+    area: 'con',
+    layout: 'bottom',
+    image: '/images/banners/console.jpg',
+    alt: 'Wooden console table styled with decor',
+    title: 'Home decor wooden console',
+    cta: { label: 'Shop now', href: '/product-category/console', variant: 'green' },
+    from: 'up',
+  },
+  {
+    area: 'sale',
+    layout: 'sale',
+    image: '/images/banners/summer-sale.jpg',
+    alt: 'Green living room with a velvet sofa and gold side table',
+    eyebrow: 'Summer sale',
+    big: '70%',
+    title: 'Discount',
+    href: '/shop',
+    from: 'right',
+  },
+  {
+    area: 'pla',
+    layout: 'box',
+    image: '/images/banners/home-plants.jpg',
+    alt: 'Large leafy house plant beside a sofa',
+    eyebrow: 'Home',
+    title: 'Plants',
+    cta: { label: 'Shop now', href: '/product-category/plants', variant: 'text', accent: '#3f6b31' },
+    from: 'left',
+  },
+  {
+    area: 'bath',
+    layout: 'box',
+    image: '/images/banners/bathroom-decor.jpg',
+    alt: 'Bath tray with candles, towel and monstera leaves',
+    eyebrow: 'Bathroom',
+    title: 'Decor',
+    cta: { label: 'Shop now', href: '/product-category/bathroom', variant: 'text', accent: '#7a4b2a' },
+    from: 'right',
+  },
+];
+
+export const features = [
+  { icon: 'clock', title: 'Short Time Delivery', text: 'Dispatched within 48 hours' },
+  { icon: 'shield', title: 'Secure Payment', text: '100% secure payment' },
+  { icon: 'truck', title: 'Free Delivery', text: 'All orders over $30' },
+  { icon: 'support', title: 'Customer Support', text: 'Support 24/7 every day' },
+];
