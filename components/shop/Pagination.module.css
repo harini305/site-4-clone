@@ -1,0 +1,35 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 60px;
+}
+
+.item {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 4px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #dcdcdc;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-black);
+  transition: background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s;
+}
+.item:hover {
+  border-color: var(--c-black);
+}
+
+.current {
+  background: var(--c-black);
+  border-color: var(--c-black);
+  color: var(--c-white);
+  cursor: default;
+}
+
+.wide {
+  padding: 0 16px;
+}

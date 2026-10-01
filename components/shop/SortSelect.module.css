@@ -1,0 +1,70 @@
+.wrap {
+  position: relative;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  height: 50px;
+  padding: 0 32px;
+  background: var(--c-black);
+  color: var(--c-white);
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.toggle svg {
+  transition: transform 0.3s var(--ease);
+}
+.flip {
+  transform: rotate(180deg);
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 20;
+  min-width: 100%;
+  background: var(--c-white);
+  border: 1px solid var(--c-line-soft);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+  animation: drop 0.25s var(--ease);
+}
+
+.menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 24px;
+  text-align: left;
+  font-size: 14px;
+  color: #6b6b6b;
+}
+.menu button:hover,
+.menu button:focus-visible {
+  background: var(--c-soft);
+  color: var(--c-black);
+  outline-offset: -2px;
+}
+.selected {
+  color: var(--c-black) !important;
+  font-weight: 600;
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle {
+    padding: 0 16px;
+    font-size: 12px;
+    gap: 8px;
+  }
+}

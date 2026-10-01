@@ -1,0 +1,128 @@
+.layout {
+  display: grid;
+  grid-template-columns: 319px 1fr;
+  gap: 37px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.sidebar {
+  min-width: 0;
+  padding-top: 14px;
+}
+
+.main {
+  min-width: 0;
+  scroll-margin-top: 110px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-family: var(--f-body);
+  font-size: 40px;
+  letter-spacing: -0.02em;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.rule {
+  flex: 1;
+  height: 1px;
+  background: #e2e2e2;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filterToggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  height: 50px;
+  padding: 0 18px;
+  border: 1px solid var(--c-black);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.count {
+  font-size: 14px;
+  color: var(--c-muted);
+  margin: 0 0 36px;
+}
+
+.reset {
+  margin-top: 10px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--c-black);
+}
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 260px 1fr;
+    gap: 30px;
+  }
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding-top: 36px;
+  }
+  .filterToggle {
+    display: inline-flex;
+  }
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 210;
+    width: min(360px, 88vw);
+    background: var(--c-white);
+    overflow-y: auto;
+    padding-top: 0;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.4s var(--ease), visibility 0s linear 0.4s;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+  }
+  .sidebarOpen {
+    transform: none;
+    visibility: visible;
+    transition: transform 0.4s var(--ease);
+  }
+  .head {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .rule {
+    display: none;
+  }
+  .title {
+    width: 100%;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+  .controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
