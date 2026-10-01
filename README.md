@@ -3,14 +3,12 @@
 A complete, responsive Next.js rebuild of the **Shop Decoration** furniture/decor store demo
 (reference: <https://demo.phlox.pro/shop-decoration-1/>).
 
-> ⚠️ Review build. Images are the reference demo's assets and are for **local review only**.
-> See [ASSETS.md](ASSETS.md) before publishing anything.
+All images are CC0 public-domain photos. Sources and licences are in [ASSETS.md](ASSETS.md).
 
 ## Quick start
 
 ```bash
 npm install
-npm run assets   # download the review images into public/images/ (gitignored)
 npm run dev      # http://localhost:3000
 ```
 
@@ -19,7 +17,6 @@ npm run dev      # http://localhost:3000
 | `npm run dev` | Development server |
 | `npm run build` / `npm start` | Production build / serve |
 | `npm run lint` | ESLint (Next.js config) |
-| `npm run assets` | Download reference images for local review |
 
 Optional env: `NEXT_PUBLIC_SITE_URL` sets the absolute base URL for metadata/Open Graph.
 On Vercel it falls back to the production domain automatically.
@@ -55,7 +52,7 @@ components/
 context/             StoreContext: cart, wishlist, panels, toasts (localStorage)
 data/                site config, categories, products, homepage content
 lib/                 catalog queries/filters, formatting, checkout rules
-scripts/             download-assets.mjs
+public/images/       CC0 photos (see ASSETS.md)
 ```
 
 ## Demo-only functionality
