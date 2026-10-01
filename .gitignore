@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Demo/theme reference images: local review only, NOT licensed for publishing.
+# Fetch with `npm run assets`. See ASSETS.md.
+/public/images/
